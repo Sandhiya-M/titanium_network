@@ -1,0 +1,515 @@
+[
+    {
+        "firstname": "Jim",
+        "lastname": "Andresson",
+        "age": 45,
+        "gender": "Male",
+        "phonenumber": "+93 456-675-3423",
+        "emergencynumber": "+93 345-234-112",
+        "address": "123 Main Street, Cityville, State",
+        "bloodgroup": "AB+",
+        "RightEyeImage": "",
+        "righteyepower": "+2.5",
+        "LeftEyeImage": "",
+        "lefteyepower": "+2.0",
+        "prescription": "PRINIVIL TABS 20 MG (LISINOPRIL), HUMULIN INJ 70/30 20 units after breakfast",
+        "symptoms": ["Blurred vision", "redness in eyes"],
+        "riskfactors": "History of diabetes",
+        "lefteyekeywords": [
+            "cataract",
+            "macular epiretinal membrane",
+            "moderate non proliferative retinopathy",
+            
+                "ocular_pressure:18 mmHg"
+            
+        ],
+        "righteyekeywords": [
+            "normal fundus",
+            "drusen",
+            "epiretinal membrane",
+            
+                "ocular_pressure:16 mmHg"
+            
+        ],
+        "examinationdate": "2023-10-05",
+        "changedby": "initLedger",
+        "permissiongranted": ["hosp1Admin", "hosp2Admin"],
+        "followUp": [
+            {
+                "Date": "2023-11-05",
+                "Doctor": "Dr. Smith",
+                "Notes": "followup for retinopathy"
+            },
+            {
+                "Date": "2024-01-15",
+                "Doctor": "Dr. Johnson",
+                "Notes": "Checkup for cataract"
+            }
+        ],
+        "password": "fd1e5d642da134218f1cc5c260feb3e4042658a35d78c4eb2fe2b2f1c7e7795b",
+        "pwdTemp": true
+    },
+    {
+        "firstname": "Amit",
+        "lastname": "Sharma",
+        "age": 42,
+        "gender": "Male",
+        "phonenumber": "+91-9876543210",
+        "emergencynumber": "+91-9876543210",
+        "address": "456 Rajpath Nagar, New Delhi, India",
+        "bloodgroup": "B+",
+        "RightEyeImage": "",
+        "righteyepower": "-2.25",
+        "LeftEyeImage": "",
+        "lefteyepower": "-2.5",
+        "prescription": "TIMOPTIC EYE DROPS, LUMIGAN EYE DROPS",
+        "symptoms": ["Myopia", "eye strain"],
+        "riskfactors": "Family history of myopia",
+        "lefteyekeywords": [
+            "myopia",
+            "normal fundus",
+            
+                "ocular_pressure:14 mmHg"
+            
+        ],
+        "righteyekeywords": [
+            "normal fundus",
+            "dry eye syndrome",
+            
+                "ocular_pressure:16 mmHg"
+            
+        ],
+        "examinationdate": "2023-09-15",
+        "changedby": "initLedger",
+        "permissiongranted": ["hosp1admin", "hosp2admin"],
+        "followUp": [
+            {
+                "Date": "2023-10-15",
+                "Doctor": "Dr. Patel",
+                "Notes": "Myopia management"
+            },
+            {
+                "Date": "2024-01-05",
+                "Doctor": "Dr. Sharma",
+                "Notes": "Dry eye treatment"
+            }
+        ],
+        "password": "fd1e5d642da134218f1cc5c260feb3e4042658a35d78c4eb2fe2b2f1c7e7795b",
+        "pwdTemp": true
+        
+    },
+    {
+        "firstname": "Alice",
+        "lastname": "Smith",
+        "age": 32,
+        "gender": "Female",
+        "phonenumber": "987-654-3210",
+        "emergencynumber": "987-654-3210",
+        "address": "456 Elm Street, Townsville, State",
+        "bloodgroup": "O-",
+        "RightEyeImage": "",
+        "righteyepower": "-1.5",
+        "LeftEyeImage": "",
+        "lefteyepower": "-2.0",
+        "prescription": "TIMOPTIC EYE DROPS, EYELID HYGIENE",
+        "symptoms": ["Dry eyes", "itching"],
+        "riskfactors": "",
+        "lefteyekeywords": [
+            "normal fundus",
+            "dry eye syndrome",
+            "conjunctivitis",
+            
+                "ocular_pressure:14 mmHg"
+            
+        ],
+        "righteyekeywords": [
+            "cataract",
+            "normal fundus",
+            
+                "ocular_pressure:16 mmHg"
+            
+        ],
+        "examinationdate": "2023-09-15",
+        "changedby": "initLedger",
+        "permissiongranted": ["hosp1admin", "hosp2admin"],
+        "followUp": [
+            {
+                "Date": "2023-10-15",
+                "Doctor": "Dr. Brown",
+                "Notes": "followup for dry eyes"
+            },
+            {
+                "Date": "2024-02-20",
+                "Doctor": "Dr. Girish G",
+                "Notes": "Cataract evaluation"
+            }
+        ],
+        "password": "fd1e5d642da134218f1cc5c260feb3e4042658a35d78c4eb2fe2b2f1c7e7795b",
+        "pwdTemp": true
+    },
+    {
+        "firstname": "Sarah",
+        "lastname": "Johnson",
+        "age": 55,
+        "gender": "Female",
+        "phonenumber": "555-123-4567",
+        "emergencynumber": "555-123-4567",
+        "address": "789 Oak Avenue, Villagetown, State",
+        "bloodgroup": "A+",
+        "RightEyeImage": "",
+        "righteyepower": "-2.0",
+        "LeftEyeImage": "",
+        "lefteyepower": "-1.75",
+        "prescription": "LUMIGAN EYE DROPS, RESTASIS EYE DROPS",
+        "symptoms": ["Glaucoma","Dry eyes"],
+        "riskfactors": "Family history of glaucoma",
+        "lefteyekeywords": [
+            "glaucoma",
+            "normal fundus",
+            
+                "ocular_pressure:22 mmHg"
+            
+        ],
+        "righteyekeywords": [
+            "normal fundus",
+            "dry eye syndrome",
+            
+                "ocular_pressure:18 mmHg"
+            
+        ],
+        "examinationdate": "2023-11-20",
+        "changedby": "initLedger",
+        "permissiongranted": ["hosp1admin", "hosp2admin"],
+        "followUp": [
+            {
+                "Date": "2023-12-20",
+                "Doctor": "Dr. Davis",
+                "Notes": "Glaucoma followup"
+            },
+            {
+                "Date": "2024-03-10",
+                "Doctor": "Dr. Girish G",
+                "Notes": "Dry eye treatment"
+            }
+        ],
+        "password": "fd1e5d642da134218f1cc5c260feb3e4042658a35d78c4eb2fe2b2f1c7e7795b",
+        "pwdTemp": true
+    },
+    {
+        "firstname": "Priya",
+        "lastname": "Raj",
+        "age": 35,
+        "gender": "Female",
+        "phonenumber": "+91-9876543210",
+        "emergencynumber": "+91-9876543210",
+        "address": "789 Beach Road, Chennai, Tamil Nadu, India",
+        "bloodgroup": "O+",
+        "RightEyeImage": "",
+        "righteyepower": "-1.75",
+        "LeftEyeImage": "",
+        "lefteyepower": "-2.0",
+        "prescription": "LATANOPROST EYE DROPS, RESTASIS EYE DROPS",
+        "symptoms": ["Blurred vision","itching"],
+        "riskfactors": "Family history of eye conditions",
+        "lefteyekeywords": [
+            "myopia",
+            "normal fundus",
+            
+                "ocular_pressure:15 mmHg"
+            
+        ],
+        "righteyekeywords": [
+            "normal fundus",
+            "dry eye syndrome",
+            
+                "ocular_pressure:16 mmHg"
+            
+        ],
+        "examinationdate": "2023-11-05",
+        "changedby": "initLedger",
+        "permissiongranted": ["hosp1admin", "hosp2admin"],
+        "followUp": [
+            {
+                "Date": "2023-12-05",
+                "Doctor": "Dr. Kumar",
+                "Notes": "Myopia management"
+            },
+            {
+                "Date": "2024-02-15",
+                "Doctor": "Dr. Ramesh",
+                "Notes": "Dry eye treatment"
+            }
+        ],
+        "password": "fd1e5d642da134218f1cc5c260feb3e4042658a35d78c4eb2fe2b2f1c7e7795b",
+        "pwdTemp": true
+    },
+    {
+        "firstname": "Jim",
+        "lastname": "J",
+        "age": 40,
+        "gender": "Male",
+        "phonenumber": "321-987-6543",
+        "emergencynumber": "321-987-6543",
+        "address": "567 Pine Street, Suburbia, State",
+        "bloodgroup": "B+",
+        "RightEyeImage": "",
+        "righteyepower": "+1.25",
+        "LeftEyeImage": "",
+        "lefteyepower": "+0.75",
+        "prescription": "ATROPINE EYE DROPS, EYELID HYGIENE",
+        "symptoms": ["Myopia", "eye strain"],
+        "riskfactors": "",
+        "lefteyekeywords": [
+            "myopia",
+            "normal fundus",
+            
+                "ocular_pressure:15 mmHg"
+            
+        ],
+        "righteyekeywords": [
+            "normal fundus",
+            "conjunctivitis",
+            
+                "ocular_pressure:14 mmHg"
+            
+        ],
+        "examinationdate": "2023-08-10",
+        "changedby": "initLedger",
+        "permissiongranted": ["hosp1admin", "hosp2admin"],
+        "followUp": [
+            {
+                "Date": "2023-09-10",
+                "Doctor": "Dr. Sandhiya M",
+                "Notes": "Myopia management"
+            },
+            {
+                "Date": "2024-01-05",
+                "Doctor": "Dr. Swetha Das",
+                "Notes": "Conjunctivitis treatment"
+            }
+        ],
+        "password": "fd1e5d642da134218f1cc5c260feb3e4042658a35d78c4eb2fe2b2f1c7e7795b",
+        "pwdTemp": true
+    },
+    {
+        "firstname": "Jack",
+        "lastname": "Wilson",
+        "age": 28,
+        "gender": "Female",
+        "phonenumber": "444-585-6124",
+        "emergencynumber": "444-585-6124",
+        "address": "987 Maple Lane, Countryside, State",
+        "bloodgroup": "A-",
+        "RightEyeImage": "",
+        "righteyepower": "-3.75",
+        "LeftEyeImage": "",
+        "lefteyepower": "-4.0",
+        "prescription": "CONTACT LENSES, EYE DROPS",
+        "symptoms": ["Vision correction", "dryness"],
+        "riskfactors": "",
+        "lefteyekeywords": [
+            "normal fundus",
+            "dry eye syndrome",
+            
+                "ocular_pressure:16 mmHg"
+            
+        ],
+        "righteyekeywords": [
+            "cataract",
+            "normal fundus",
+            
+                "ocular_pressure:17 mmHg"
+            
+        ],
+        "examinationdate": "2023-12-01",
+        "changedby": "initLedger",
+        "permissiongranted": ["hosp1admin", "hosp2admin"],
+        "followUp": [
+            {
+                "Date": "2024-01-10",
+                "Doctor": "Dr. Swetha Das",
+                "Notes": "Vision correction followup"
+            },
+            {
+                "Date": "2024-05-15",
+                "Doctor": "Dr. Leo Das",
+                "Notes": "Cataract evaluation"
+            }
+        ],
+        "password": "fd1e5d642da134218f1cc5c260feb3e4042658a35d78c4eb2fe2b2f1c7e7795b",
+        "pwdTemp": true
+    },
+    {
+        "firstname": "David",
+        "lastname": "Lee",
+        "age": 62,
+        "gender": "Male",
+        "phonenumber": "+91 87904-43214",
+        "emergencynumber": "+91 87904-43214",
+        "address": "101 Cedar Road, Mountainview, State",
+        "bloodgroup": "B-",
+        "RightEyeImage": "",
+        "righteyepower": "+2.0",
+        "LeftEyeImage": "",
+        "lefteyepower": "+1.5",
+        "prescription": "BRIMONIDINE EYE DROPS, LUMIGAN EYE DROPS",
+        "symptoms": ["Glaucoma", "blurred vision"],
+        "riskfactors": "High blood pressure",
+        "lefteyekeywords": [
+            "glaucoma",
+            "normal fundus",
+            
+                "ocular_pressure:20 mmHg"
+            
+        ],
+        "righteyekeywords": [
+            "normal fundus",
+            "cataract",
+            
+                "ocular_pressure:18 mmHg"
+            
+        ],
+        "examinationdate": "2023-07-25",
+        "changedby": "initLedger",
+        "permissiongranted": ["hosp1admin", "hosp2admin"],
+        "followUp": [
+            {
+                "Date": "2023-08-25",
+                "Doctor": "Dr. Miller",
+                "Notes": "Glaucoma followup"
+            },
+            {
+                "Date": "2024-02-10",
+                "Doctor": "Dr. Dhoni",
+                "Notes": "Cataract evaluation"
+            }
+        ],
+        "password": "fd1e5d642da134218f1cc5c260feb3e4042658a35d78c4eb2fe2b2f1c7e7795b",
+        "pwdTemp": true
+    },
+    {
+        "firstname": "Alex",
+        "lastname": "Pandiyan",
+        "age": 30,
+        "gender": "Male",
+        "phonenumber": "+1-555-123-4567",
+        "emergencynumber": "+1-555-789-1234",
+        "address": "123 Oak Street, Anytown, USA",
+        "bloodgroup": "A-",
+        "RightEyeImage": "",
+        "righteyepower": "+0.5",
+        "LeftEyeImage": "",
+        "lefteyepower": "+0.5",
+        "prescription": "None",
+        "symptoms": "No significant eye issues",
+        "riskfactors": "No known health conditions",
+        "lefteyekeywords": [
+            "normal fundus"
+        ],
+        "righteyekeywords": [
+            "normal fundus"
+        ],
+        "examinationdate": "2023-08-20",
+        "changedby": "initLedger",
+        "permissiongranted": ["hosp1Admin", "hosp2Admin"],
+        "followUp": [],
+        "password": "fd1e5d642da134218f1cc5c260feb3e4042658a35d78c4eb2fe2b2f1c7e7795b",
+        "pwdTemp": true
+    },
+    {
+        "firstname": "Joseph",
+        "lastname": "Vijay",
+        "age": 65,
+        "gender": "Male",
+        "phonenumber": "555-123-7890",
+        "emergencynumber": "555-789-1234",
+        "address": "321 Oak Street, Riverside, State",
+        "bloodgroup": "O+",
+        "RightEyeImage": "",
+        "righteyepower": "-3.0",
+        "LeftEyeImage": "",
+        "lefteyepower": "-3.5",
+        "prescription": "DORZOLAMIDE-TIMOLOL EYE DROPS, LUMIGAN EYE DROPS, ORAL ANTICOAGULANTS",
+        "symptoms": ["Severe Glaucoma", "Diabetic Retinopathy", "Hypertension"],
+        "riskfactors": "Diabetes, High blood pressure, Heart disease",
+        "lefteyekeywords": [
+            "Severe glaucoma",
+            "Diabetic retinopathy",
+            
+                "ocular_pressure:28 mmHg"
+            
+        ],
+        "righteyekeywords": [
+            "cataract",
+            "moderate non proliferative retinopathy",
+            
+                "ocular_pressure:26 mmHg"
+            
+        ],
+        "examinationdate": "2023-09-30",
+        "changedby": "initLedger",
+        "permissiongranted": ["hosp1admin", "hosp2admin"],
+        "followUp": [
+            {
+                "Date": "2023-10-15",
+                "Doctor": "Dr. Girish G",
+                "Notes": "Emergency glaucoma treatment"
+            },
+            {
+                "Date": "2023-11-20",
+                "Doctor": "Dr. Patel",
+                "Notes": "Diabetic retinopathy evaluation"
+            }
+        ],
+        "password": "fd1e5d642da134218f1cc5c260feb3e4042658a35d78c4eb2fe2b2f1c7e7795b",
+        "pwdTemp": true
+    },
+    {
+        "firstname": "James",
+        "lastname": "Bond",
+        "age": 58,
+        "gender": "Male",
+        "phonenumber": "444-523-2355",
+        "emergencynumber": "444-523-1737",
+        "address": "456 Pine Avenue, Hillside, State",
+        "bloodgroup": "A+",
+        "RightEyeImage": "",
+        "righteyepower": "-4.0",
+        "LeftEyeImage": "",
+        "lefteyepower": "-4.5",
+        "prescription": "TRAVATAN EYE DROPS, TIMOLOL EYE DROPS, WARFARIN",
+        "symptoms": "Advanced glaucoma, diabetic retinopathy, heart disease",
+        "riskfactors": ["Diabetes", "high blood pressure", "family history of heart disease"],
+        "lefteyekeywords": [
+            "advanced glaucoma",
+            "diabetic retinopathy",
+            
+                "ocular_pressure:30 mmHg"
+            
+        ],
+        "righteyekeywords": [
+            "cataract",
+            "moderate non proliferative retinopathy",
+            
+                "ocular_pressure:28 mmHg"
+            
+        ],
+        "examinationdate": "2023-10-10",
+        "changedby": "initLedger",
+        "permissiongranted": ["hosp1admin", "hosp2admin"],
+        "followUp": [
+            {
+                "Date": "2023-11-01",
+                "Doctor": "Dr. Turner",
+                "Notes": "Emergency glaucoma treatment"
+            },
+            {
+                "Date": "2023-12-15",
+                "Doctor": "Dr. Patel",
+                "Notes": "Diabetic retinopathy evaluation"
+            }
+        ],
+        "password": "fd1e5d642da134218f1cc5c260feb3e4042658a35d78c4eb2fe2b2f1c7e7795b",
+        "pwdTemp": true
+    }
+]

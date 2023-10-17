@@ -1,0 +1,46 @@
+<app-toolbar text="Patient History">
+  <app-toolbar-button text="Refresh" icon="refresh" (click)="refresh()"></app-toolbar-button>
+</app-toolbar>
+<br><br><br>
+
+<div class="sidebar-layout-bottom-row p-3 container-fluid">
+  <p>History of a patient.</p>
+  <div class="table-responsive-lg">
+    <table class="table table-hover">
+      <thead class="thread-light">
+        <tr>
+          <th *ngFor="let column of headerNames" scope="col">
+            {{column.displayName}}
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <!--<tr *ngFor="let singleRecord of [patientRecordHistory]">
+          <td *ngFor="let columnName of headerNames">
+            {{singleRecord[columnName.keyName]}}
+          </td>
+        </tr>-->
+        <tr *ngFor="let singleRecord of patientRecordHistoryObs$ | async">
+          
+          <td>{{singleRecord.changedby}}</td>
+          <td>{{singleRecord.firstname}}</td>
+          <td>{{singleRecord.lastname}}</td>
+          <td>{{singleRecord.age}}</td>
+          <td>{{singleRecord.bloodgroup}}</td>
+          <ng-container *ngIf="isPatient()">
+            <td>{{singleRecord.address}}</td>
+            <td>{{singleRecord.phonenumber}}</td>
+            <td>{{singleRecord.emergencynumber}}</td>
+          </ng-container>
+          <td>{{singleRecord.lefteyepower}}</td>
+          <td>{{singleRecord.righteyepower}}</td>
+          <td>{{singleRecord.symptoms}}</td>
+          <td>{{singleRecord.prescription}}</td>
+          <td>{{singleRecord.riskfactors}}</td>
+          <td>{{singleRecord.examinationdate}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <span>Total count: {{(patientRecordHistoryObs$ | async)?.length}}</span>
+  </div>
+</div>

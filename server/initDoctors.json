@@ -1,0 +1,26 @@
+[
+    {
+        "hospitalId": "1",
+        "firstname": "Sam",
+        "lastname": "Richard",
+        "speciality": "Pediatric"
+    },
+    {
+        "hospitalId": "2",
+        "firstname": "Tamzih",
+        "lastname": "Selvan",
+        "speciality": "Ophthalmologist"
+    },
+    {
+        "hospitalId": "1",
+        "firstname": "Raji",
+        "lastname": "Ragavel",
+        "speciality": "Ocular Oncology"
+    },
+    {
+        "hospitalId": "2",
+        "firstname": "Jerry",
+        "lastname": "Mark",
+        "speciality": "Ophthalmologist"
+    }
+]

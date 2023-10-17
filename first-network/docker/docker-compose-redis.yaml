@@ -1,0 +1,32 @@
+version: '2'
+
+networks:
+  hospital:
+
+services:
+  redis1:
+    image: 'redis:latest'
+    container_name: redis.hosp1.titanium.com
+    command: redis-server --requirepass hosp1titanium
+    ports:
+      - "6379:6379"
+    networks:
+      - hospital
+
+  redis2:
+    image: 'redis:latest'
+    container_name: redis.hosp2.titanium.com
+    command: redis-server --requirepass hosp2titanium
+    ports:
+      - "6380:6379"
+    networks:
+      - hospital
+
+  redis3:
+    image: 'redis:latest'
+    container_name: redis.hosp3.titanium.com
+    command: redis-server --requirepass hosp3titanium
+    ports:
+      - "6381:6379"
+    networks:
+      - hospital
