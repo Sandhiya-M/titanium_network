@@ -1,10 +1,4 @@
-/**
- * @author Jathin Sreenivas
- * @email jathin.sreenivas@stud.fra-uas.de
- * @create date 2020-12-26 13:26:42
- * @modify date 2021-01-30 12:22:11
- * @desc Execute this file to create and enroll an admin at Hospital 2.
- */
+
 
 
 const {Wallets} = require('fabric-network');

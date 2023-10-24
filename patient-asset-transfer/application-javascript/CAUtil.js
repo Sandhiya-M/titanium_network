@@ -69,7 +69,11 @@ exports.registerAndEnrollUser = async (caClient, wallet, orgMspId, userId, admin
     attributes = JSON.parse(attributes);
     const firstname = attributes.firstname;
     const lastname = attributes.lastname;
-    const role = attributes.role;
+    const role=attributes.role;
+    if(role==='doctor'){
+      console.log(firstname+ " "+lastname);
+    }
+    
     const speciality = (role === 'doctor') ? attributes.speciality : '';
 
 

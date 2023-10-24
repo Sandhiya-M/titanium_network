@@ -38,6 +38,7 @@ class PrimaryContract extends Contract {
             righteyekeywords: asset.righteyekeywords,
             examinationdate: asset.examinationdate,
             password: asset.password,
+            permissiongranted: asset.permissiongranted,
             pwdTemp:asset.pwdTemp,
             changedby:asset.changedby         
         });
@@ -80,6 +81,27 @@ class PrimaryContract extends Contract {
                 return allResults;
             }
         }
+    }
+    async queryAllPatients(ctx) {
+        let resultsIterator = await ctx.stub.getStateByRange('', '');
+        let asset = await this.getAllPatientResults(resultsIterator, false);
+
+        return this.fetchLimitedFields(asset);
+    }
+
+    fetchLimitedFields = asset => {
+        for (let i = 0; i < asset.length; i++) {
+            const obj = asset[i];
+            asset[i] = {
+                patientId: obj.Key,
+                firstname: obj.Record.firstname,
+                lastname: obj.Record.lastname,
+                phonenumber: obj.Record.phonenumber,
+                emergencynumber: obj.Record.emergenynumber
+            };
+        }
+
+        return asset;
     }
     
 }

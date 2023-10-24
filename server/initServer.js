@@ -17,7 +17,7 @@ async function initLedger() {
     const patients = JSON.parse(jsonString);
     let i = 0;
     for (i = 0; i < patients.length; i++) {
-      const attr = {firstname: patients[i].firstname, lastname: patients[i].lastname, role: 'patient'};
+      const attr = {firstname: patients[i].firstname, lastname: patients[i].lastname, role:'patient'};
       await enrollRegisterUser('1', 'PID'+i, JSON.stringify(attr));
     }
   } catch (err) {
@@ -54,11 +54,12 @@ async function enrollAndRegisterDoctors() {
     const doctors = JSON.parse(jsonString);
     for (let i = 0; i < doctors.length; i++) {
       const attr = {firstname: doctors[i].firstname, lastname: doctors[i].lastname, role: 'doctor', speciality: doctors[i].speciality};
+
       // Create a redis client and add the doctor to redis
       doctors[i].hospitalId = parseInt(doctors[i].hospitalId);
       const redisClient = createRedisClient(doctors[i].hospitalId);
       (await redisClient).SET('HOSP' + doctors[i].hospitalId + '-' + 'DOC' + i, 'password');
-      await (doctors[i].hospitalId, 'HOSP' + doctors[i].hospitalId + '-' + 'DOC' + i, JSON.stringify(attr));
+      await enrollRegisterUser(doctors[i].hospitalId, 'HOSP' + doctors[i].hospitalId + '-' + 'DOC' + i, JSON.stringify(attr));
       console.log("Registered Doctor"+i);
       (await redisClient).QUIT();
     }

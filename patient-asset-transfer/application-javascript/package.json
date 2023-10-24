@@ -10,7 +10,7 @@
         "lint": "eslint ."
     },
     "engineStrict": true,
-    "author": "Jathin",
+    "author": "Sandhiya",
     "license": "Apache-2.0",
     "dependencies": {
         "fabric-ca-client": ">=2.2.0",

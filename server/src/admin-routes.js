@@ -85,6 +85,7 @@ exports.getAllPatients = async (req, res) => {
   // Invoke the smart contract function
   const response = await network.invoke(networkObj, true, capitalize(userRole) + 'Contract:queryAllPatients',
     userRole === ROLE_DOCTOR ? req.headers.username : '');
+  console.log("*****************"+userRole+"****************");
   const parsedResponse = await JSON.parse(response);
   res.status(200).send(parsedResponse);
 };

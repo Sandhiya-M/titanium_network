@@ -6,6 +6,8 @@ import { DoctorService } from '../doctor.service';
 import { DoctorRecord, DoctorViewRecord } from '../doctor';
 import { DisplayVal } from '../../patient/patient';
 import { PatientService } from '../../patient/patient.service';
+import { AuthService } from '../../core/auth/auth.service';
+import { RoleEnum } from '../../utils';
 
 @Component({
   selector: 'app-doctor-list-for-patient',
@@ -28,7 +30,8 @@ export class DoctorListForPatientComponent implements OnInit, OnDestroy {
   constructor(
     private readonly route: ActivatedRoute,
     private readonly doctorService: DoctorService,
-    private readonly patientService: PatientService
+    private readonly patientService: PatientService,
+    private readonly authService: AuthService
   ) { }
 
   ngOnInit(): void {
@@ -46,12 +49,13 @@ export class DoctorListForPatientComponent implements OnInit, OnDestroy {
 
   public refresh(): void {
     this.doctorRecords = [];
-    console.log("I am in");
+    console.log("-----------------I am in---------------------");
     this.allSubs.add(
       this.patientService.getPatientByKey(this.patientID).subscribe(x => {
         this.permissions = x.permissiongranted;
        
         this.fetchDoctorData();
+
       })
     );
   }
@@ -61,7 +65,7 @@ export class DoctorListForPatientComponent implements OnInit, OnDestroy {
       this.doctorService.getDoctorsByHospitalId(1).subscribe(x => {
         const data = x as Array<DoctorRecord>;
         data.map(y => this.doctorRecords.push(new DoctorViewRecord(y)));
-        console.log("Hello");
+        
       })
     );
     this.allSubs.add(
@@ -99,5 +103,8 @@ export class DoctorListForPatientComponent implements OnInit, OnDestroy {
   public isDoctorPresent(doctorId: string): boolean {
     // @ts-ignore
     return this.permissions.includes(doctorId);
+  }
+  public isPatient(): boolean {
+    return this.authService.getRole() === RoleEnum.PATIENT;
   }
 }

@@ -34,10 +34,11 @@ class DoctorContract extends AdminContract {
             lefteyekeywords: asset.lefteyekeywords,
             righteyekeywords: asset.righteyekeywords,
             examinationdate: asset.examinationdate,
+            chanedby: asset.chanedby,
+            gender: asset.gender,
         });
         return asset;
     }
-
     //This function is to update patient medical details. This function should be called by only doctor.
     async updatePatientMedicalDetails(ctx, args) {
         args = JSON.parse(args);
@@ -51,11 +52,8 @@ class DoctorContract extends AdminContract {
         let newlefteyekeywords=args.lefteyekeywords;
         let newrighteyekeywords=args.righteyekeywords;
         let newexaminationdate=args.examinationdate;
-        let chanedby=doctorId;
-        
-
+        let updatedBy= args.changedby;     
         const patient = await PrimaryContract.prototype.readPatient(ctx, patientId);
-
         if (newsymptoms !== null && newsymptoms !== '' && patient.symptoms !== newsymptoms) {
             patient.symptoms = newsymptoms;
             isDataChanged = true;
@@ -86,12 +84,12 @@ class DoctorContract extends AdminContract {
         }
 
 
-        if(chanedby!== null && chanedby !== '') {
+        if(updatedBy!== null && updatedBy!== '') {
             patient.changedby = updatedBy;
         }
 
         if (isDataChanged === false) return;
-
+       patient.examinationdate=(new Date()).toString();
         const buffer = Buffer.from(JSON.stringify(patient));
         await ctx.stub.putState(patientId, buffer);
     }
@@ -146,7 +144,7 @@ class DoctorContract extends AdminContract {
                 lefteyekeywords: obj.Record.lefteyekeywords,
                 righteyekeywords: obj.Record.righteyekeywords,
                 examinationdate: obj.Record.examinationdate,
-               
+                
             };
             if (includeTimeStamp) {
                 asset[i].changedby = obj.Record.changedby;

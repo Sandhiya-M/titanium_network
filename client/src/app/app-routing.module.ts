@@ -13,6 +13,8 @@ import { PatientDetailsMedicalEditComponent } from './patient/patient-details-me
 import { PatientDetailsPersonalEditComponent } from './patient/patient-details-personal-edit/patient-details-personal-edit.component';
 import { DoctorListForPatientComponent } from './doctor/doctor-list-for-patient/doctor-list-for-patient.component';
 import { PatientListForDoctorComponent } from './doctor/patient-list-for-doctor/patient-list-for-doctor.component';
+import { DoctorListForAdminComponent } from './doctor/doctor-list-for-admin/doctor-list-for-admin.component';
+
 
 const routes: Routes = [
   {
@@ -72,7 +74,12 @@ const routes: Routes = [
   {
     path: 'admin/:adminId',
     component: AdminComponent
+  },
+  {
+    path: 'doctors/list/:self',
+    component: DoctorListForAdminComponent
   }
+
 ];
 
 @NgModule({

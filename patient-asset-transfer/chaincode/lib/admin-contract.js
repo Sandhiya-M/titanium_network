@@ -20,8 +20,9 @@ class AdminContract extends PrimaryContract {
         if (args.password === null || args.password === '') {
             throw new Error(`Empty or null values should not be passed for password parameter`);
         }
+        console.log("New id:----"+this.getLatestPatientId(ctx)+1);
 
-        let newPatient = await new Patient("PID"+(this.getAllPatientResults(ctx)+1).toString(), args.firstname, args.lastname, args.password, args.age,args.gender,
+        let newPatient = await new Patient("PID"+(this.getLatestPatientId(ctx)+1).toString(), args.firstname, args.lastname, args.password, args.age,args.gender,
             args.phonenumber, args.emergencynumber, args.address, args.bloodgroup,args.lefteyepower,args.righteyepower,args.prescription,args.riskfactors,args.lefteyekeywords,args.righteyekeywords, args.changedby, args.symptoms);
         const exists = await this.patientExists(ctx, newPatient.patientId);
         if (exists) {

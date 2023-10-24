@@ -20,14 +20,7 @@
           <td>{{singleRecord.doctorId}}</td>
           <td>{{singleRecord.firstname}}</td>
           <td>{{singleRecord.lastname}}</td>
-          <ng-container *ngIf="isPatient()">
-          <td>
-            <button type="button" class="btn btn-success mr-1" (click)="grant(singleRecord.doctorId)"
-              [disabled]="isDoctorPresent(singleRecord.doctorId)">GRANT</button>
-            <button type="button" class="btn btn-danger ml-1" (click)="revoke(singleRecord.doctorId)"
-              [disabled]="!isDoctorPresent(singleRecord.doctorId)">REVOKE</button>
-          </td>
-          </ng-container>
+          
         </tr>
       </tbody>
     </table>

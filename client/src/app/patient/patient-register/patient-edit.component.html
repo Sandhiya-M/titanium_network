@@ -51,9 +51,24 @@
               </ng-container>
               <ng-container *ngIf="isDoctor() && !isNew()">
                 <div class="form-group">
-                  <label for="allergies">Allergies</label>
-                  <input type="text" class="form-control" name="allergies" formControlName="allergies"
-                         placeholder="Does patient has any allergies?">
+                  <label for="lefteyepower">Left Eye Power</label>
+                  <input type="text" class="form-control" name="lefteyepower" formControlName="lefteyepower"
+                         placeholder="Enter the Left Eye Power with Sign?">
+                </div>
+                <div class="form-group">
+                  <label for="righteyepower">Right Eye Power</label>
+                  <input type="text" class="form-control" name="righteyepower" formControlName="righteyepower"
+                         placeholder="Enter the Right Eye Power with Sign?">
+                </div>
+                <div class="form-group">
+                  <label for="lefteyekeywords">Left Eye Keywords</label>
+                  <input type="text" class="form-control" name="lefteyekeywords" formControlName="lefteyekeywords"
+                         placeholder="Enter the Left Eye Keywords with comma?">
+                </div>
+                <div class="form-group">
+                  <label for="righteyekeywords">Right Eye Keywords</label>
+                  <input type="text" class="form-control" name="righteyekeywords" formControlName="righteyekeywords"
+                         placeholder="Enter the Right Eye Keywords with comma?">
                 </div>
                 <div class="form-group">
                   <label for="symptoms">Symptoms</label>
@@ -61,20 +76,16 @@
                          placeholder="Enter patient's symptoms.">
                 </div>
                 <div class="form-group">
-                  <label for="diagnosis">Diagnosis</label>
-                  <input type="text" class="form-control" name="diagnosis" formControlName="diagnosis"
-                         placeholder="What do you find in diagnosis?">
+                  <label for="riskfactors">Risk Factors</label>
+                  <input type="text" class="form-control" name="riskfactors" formControlName="riskfactors"
+                         placeholder="Risk Factors">
                 </div>
                 <div class="form-group">
-                  <label for="treatment">Treatment</label>
-                  <input type="text" class="form-control" name="treatment" formControlName="treatment"
-                         placeholder="What treatment will you suggest?">
+                  <label for="treatment">Prescription</label>
+                  <input type="text" class="form-control" name="prescription" formControlName="prescription"
+                         placeholder="Prescription separated by comma?">
                 </div>
-                <div class="form-group">
-                  <label for="followUp">Follow Up Duration</label>
-                  <input type="text" class="form-control" name="followUp" formControlName="followUp"
-                         placeholder="Enter follow up duration.">
-                </div>
+                
               </ng-container>
               <div *ngIf="newPatientData">
                 <p class="alert alert-success">New patient's credentials: {{newPatientData.id}} - {{newPatientData.password}}</p>

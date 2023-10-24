@@ -39,7 +39,7 @@ fetchChannelConfig() {
 
   echo "Fetching the most recent configuration block for the channel"
   set -x
-  peer channel fetch config config_block.pb -o orderer.titanium.com:7050 --ordererTLSHostnameOverride orderer.titanium.com -c $CHANNEL --tls --cafile $ORDERER_CA
+  peer channel fetch config config_block.pb -o localhost:7050 --ordererTLSHostnameOverride orderer.titanium.com -c $CHANNEL --tls --cafile $ORDERER_CA
   { set +x; } 2>/dev/null
 
   echo "Decoding config block to JSON and isolating config to ${OUTPUT}"
@@ -106,7 +106,7 @@ echo "========= Submitting transaction from a different peer (peer0.hosp2) which
 echo
 setGlobals 2
 set -x
-peer channel update -f hosp3_update_in_envelope.pb -c ${CHANNEL_NAME} -o orderer.titanium.com:7050 --ordererTLSHostnameOverride orderer.titanium.com --tls --cafile ${ORDERER_CA}
+peer channel update -f hosp3_update_in_envelope.pb -c ${CHANNEL_NAME} -o localhost:7050 --ordererTLSHostnameOverride orderer.titanium.com --tls --cafile ${ORDERER_CA}
 { set +x; } 2>/dev/null
 
 echo

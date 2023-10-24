@@ -52,7 +52,7 @@ joinChannelWithRetry() {
 
 echo "Fetching channel config block from orderer..."
 set -x
-peer channel fetch 0 $CHANNEL_NAME.block -o orderer.titanium.com:7050 --ordererTLSHostnameOverride orderer.titanium.com -c $CHANNEL_NAME --tls --cafile $ORDERER_CA >&log.txt
+peer channel fetch 0 $CHANNEL_NAME.block -o localhost:7050 --ordererTLSHostnameOverride orderer.titanium.com -c $CHANNEL_NAME --tls --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/organizations/ordererOrganizations/titanium.com/orderers/orderer.titanium.com/msp/tlscacerts/tlsca.titanium.com-cert.pem >&log.txt
 res=$?
 { set +x; } 2>/dev/null
 cat log.txt

@@ -27,6 +27,8 @@ import { PatientDetailsPersonalEditComponent } from './patient/patient-details-p
 import { DoctorListForPatientComponent } from './doctor/doctor-list-for-patient/doctor-list-for-patient.component';
 import { PatientListForDoctorComponent } from './doctor/patient-list-for-doctor/patient-list-for-doctor.component';
 import { LoadingPipe } from './loading.pipe';
+import { DoctorListForAdminComponent } from './doctor/doctor-list-for-admin/doctor-list-for-admin.component';
+
 
 const components = [
   AppComponent,
@@ -45,7 +47,8 @@ const components = [
   ToolbarButtonComponent,
   ToolbarLinkComponent,
   SearchComboComponent,
-  SearchTextComponent
+  SearchTextComponent,
+  DoctorListForAdminComponent
 ];
 
 const pipes = [

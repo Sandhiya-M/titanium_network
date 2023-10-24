@@ -15,7 +15,7 @@ PEER0_HOSP3_CA=/opt/gopath/src/github.com/hyperledger/fabric/peer/organizations/
 setOrdererGlobals() {
   CORE_PEER_LOCALMSPID="OrdererMSP"
   CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/organizations/ordererOrganizations/titanium.com/orderers/orderer.titanium.com/msp/tlscacerts/tlsca.titanium.com-cert.pem
-  CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/peer/organizations/ordererOrganizations/titanium.com/users/Admin@titanium.com/msp
+  CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/organizations/ordererOrganizations/titanium.com/users/Admin@titanium.com/msp
 }
 
 # Set environment variables for the peer org

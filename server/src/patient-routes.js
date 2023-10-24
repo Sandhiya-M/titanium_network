@@ -89,8 +89,11 @@ exports.grantAccessToDoctor = async (req, res) => {
   await validateRole([ROLE_PATIENT], userRole, res);
   const patientId = req.params.patientId;
   const doctorId = req.params.doctorId;
+  //console.log("Patient: "+patientId );
   let args = {patientId: patientId, doctorId: doctorId};
   args= [JSON.stringify(args)];
+  sp=JSON.parse(args[0]);
+  console.log("In PC : Patient: "+sp.patientId + "Doctor: "+sp.doctorId);
   // Set up and connect to Fabric Gateway
   const networkObj = await network.connectToNetwork(req.headers.username);
   // Invoke the smart contract function

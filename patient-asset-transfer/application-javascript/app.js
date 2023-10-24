@@ -67,8 +67,10 @@ exports.invoke = async function(networkObj, isQuery, func, args= '') {
       return response;
     } else {
       if (args) {
-        args = JSON.parse(args[0]);
+         args = JSON.parse(args[0]);
+        console.log("In app : DoctorId"+args.doctorId+"PatietId: "+args.patientId);
         args = JSON.stringify(args);
+  
       }
       const response = await networkObj.contract.submitTransaction(func, args);
       await networkObj.gateway.disconnect();
@@ -155,7 +157,8 @@ exports.getAllDoctorsByHospitalId = async function(networkObj, hospitalId) {
         attributes = identities[i].attrs;
         // Doctor object will consist of firstName and lastname
         for (let j = 0; j < attributes.length; j++) {
-          if (attributes[j].name.endsWith('Name') || attributes[j].name === 'role' || attributes[j].name === 'speciality') {
+          if (attributes[j].name.endsWith('name') || attributes[j].name === 'role' || attributes[j].name === 'speciality') {
+            //console.log(attributes[j].name+": "+attributes[j].value);
             tmp[attributes[j].name] = attributes[j].value;
           }
         }

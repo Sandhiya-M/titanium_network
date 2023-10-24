@@ -48,11 +48,13 @@ export class PatientEditComponent implements OnInit, OnDestroy {
       phonenumber: ['', Validators.required],
       emergencynumber: ['', Validators.required],
       bloodgroup: ['', Validators.required],
-      allergies: [''],
+      lefteyepower: [''],
+      righteyepower: [''],
+      righteyekeywords: [''],
+      lefteyekeywords: [''],
       symptoms: [''],
-      diagnosis: [''],
-      treatment: [''],
-      followUp: ['']
+      prescription:[''],
+      riskfactors:[''],
     });
   }
 
@@ -169,8 +171,11 @@ export class PatientEditComponent implements OnInit, OnDestroy {
         lefteyepower: record.lefteyepower,
         righteyepower: record.righteyepower,
         prescription: record.prescription,        
-        symptoms: record.symptoms
-       
+        symptoms: record.symptoms,
+        riskfactors: record.riskfactors,
+        lefteyekeywords: record.lefteyekeywords,
+        righteyekeywords:record.righteyekeywords,
+      
       });
     }
   }
