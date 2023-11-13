@@ -12,86 +12,94 @@
 <br><br><br>
 <div class="sidebar-layout-bottom-row p-3 container-fluid">
   <div class="row">
-    <div class="col-xl-6 col-sm-12">
+    <div class="col-xl-8 col-sm-16">
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">Details</h5>
           <table *ngIf="patientRecordObs | async as record">
             <span>
               <tr>
-                <td class="labels"><strong>Patient ID</strong></td>
+                <td class="labels"><strong>Patient ID &nbsp; &nbsp;</strong></td>
                 <td>{{record.patientId}}</td>
               </tr>
+              <ng-container *ngIf="isPatient()">
               <tr>
-                <td class="labels"><strong>First Name</strong></td>
+                <td class="labels"><strong>First Name &nbsp; &nbsp;</strong></td>
                 <td>{{record.firstname}}</td>
               </tr>
               <tr>
-                <td class="labels"><strong>Last Name</strong></td>
+                <td class="labels"><strong>Last Name &nbsp; &nbsp;</strong></td>
                 <td>{{record.lastname}}</td>
               </tr>
+            </ng-container>
               <tr>
-                <td class="labels"><strong>Age</strong></td>
+                <td class="labels"><strong>Age &nbsp; &nbsp;</strong></td>
                 <td>{{record.age}}</td>
               </tr>
               <tr>
-                <td class="labels"><strong>gender</strong></td>
+                <td class="labels"><strong>gender &nbsp; &nbsp;</strong></td>
                 <td>{{record.gender}}</td>
               </tr>
               <ng-container *ngIf="isPatient()">
                 <tr>
-                  <td class="labels"><strong>Contact number</strong></td>
+                  <td class="labels"><strong>Contact number &nbsp; &nbsp;</strong></td>
                   <td>{{record.phonenumber}}</td>
                 </tr>
                 <tr>
-                  <td class="labels"><strong>Emergency number</strong></td>
+                  <td class="labels"><strong>Emergency number &nbsp; &nbsp;</strong></td>
                   <td>{{record.emergencynumber}}</td>
                 </tr>
                 <tr>
-                  <td class="labels"><strong>Address</strong></td>
+                  <td class="labels"><strong>Address &nbsp; &nbsp;</strong></td>
                   <td>{{record.address}}</td>
                 </tr>
               </ng-container>
               <tr>
-                <td class="labels"><strong>Blood Group</strong></td>
+                <td class="labels"><strong>Blood Group &nbsp; &nbsp;</strong></td>
                 <td>{{record.bloodgroup}}</td>
               </tr>
               <tr>
-                <td class="labels"><strong>lefteyepower</strong></td>
+                <td class="labels"><strong>lefteyepower &nbsp; &nbsp;</strong></td>
                 <td>{{record.lefteyepower}}</td>
               </tr>
               <tr>
-                <td class="labels"><strong>righteyepower</strong></td>
+                <td class="labels"><strong>righteyepower &nbsp; &nbsp;</strong></td>
                 <td>{{record.righteyepower}}</td>
               </tr>
               <tr>
-                <td class="labels"><strong>lefteyekeywords</strong></td>
+                <td class="labels"><strong>lefteyekeywords &nbsp; &nbsp;</strong></td>
                 <td>{{record.lefteyekeywords}}</td>
               </tr>
               <tr>
-                <td class="labels"><strong>righteyekeywords</strong></td>
+                <td class="labels"><strong>righteyekeywords &nbsp; &nbsp;</strong></td>
                 <td>{{record.righteyekeywords}}</td>
               </tr>
               <tr>
-
-                <td class="labels"><strong>Symptoms</strong></td>
+                <td class="labels"><strong>Symptoms &nbsp; &nbsp;</strong></td>
                 <td>{{record.symptoms}}</td>
               </tr>
               <tr>
-
-                <td class="labels"><strong>Risk factors</strong></td>
+                <td class="labels"><strong>Risk factors &nbsp; &nbsp;</strong></td>
                 <td>{{record.riskfactors}}</td>
               </tr>
               <tr>
-                <td class="labels"><strong>Examination Date</strong></td>
+                <td class="labels"><strong>Examination Date &nbsp; &nbsp;</strong></td>
                 <td>{{record.examinationdate}}</td>
               </tr>
               <tr>
-                <td class="labels"><strong>Prescription</strong></td>
+                <td class="labels"><strong>Prescription &nbsp; &nbsp;</strong></td>
                 <td>{{record.prescription}}</td>
+              </tr>             
+              <tr>
+                <td class="labels"><strong>Left Image: &nbsp; &nbsp;</strong></td>
+                <td><img src= {{record.lefteyeimage}}  width="200" height="200"></td>                
               </tr>
               <tr>
-                <td class="labels"><strong>ChangedBy</strong></td>
+                <td class="labels"><strong>Right Image: &nbsp; &nbsp;</strong></td>
+                <td><img src= {{record.righteyeimage}} width="200" height="200"></td>                
+              </tr>
+              <tr>
+                <td class="labels"><strong>ChangedBy &nbsp; &nbsp;</strong></td>
                 <td>{{record.changedby}}</td>
               </tr>
             </span>

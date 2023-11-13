@@ -1,6 +1,7 @@
 
 'use strict';
 
+const { parse } = require('path');
 let Patient = require('./Patient.js');
 const PrimaryContract = require('./primary-contract.js');
 
@@ -10,7 +11,7 @@ class AdminContract extends PrimaryContract {
     async getLatestPatientId(ctx) {
         let allResults = await this.queryAllPatients(ctx);
 
-        return allResults.length ;
+        return allResults.length;
     }
 
     //Create patient in the ledger
@@ -22,8 +23,8 @@ class AdminContract extends PrimaryContract {
         }
         console.log("New id:----"+this.getLatestPatientId(ctx)+1);
 
-        let newPatient = await new Patient("PID"+(this.getLatestPatientId(ctx)+1).toString(), args.firstname, args.lastname, args.password, args.age,args.gender,
-            args.phonenumber, args.emergencynumber, args.address, args.bloodgroup,args.lefteyepower,args.righteyepower,args.prescription,args.riskfactors,args.lefteyekeywords,args.righteyekeywords, args.changedby, args.symptoms);
+        let newPatient = await new Patient(args.patientId, args.firstname, args.lastname, args.password, args.age,args.gender,
+            args.phonenumber, args.emergencynumber, args.address,args.bloodgroup,args.lefteyepower,args.righteyepower,args.lefteyeimage,args.righteyeimage,args.prescription,args.riskfactors,args.lefteyekeywords,args.righteyekeywords,args.changedby, args.symptoms);
         const exists = await this.patientExists(ctx, newPatient.patientId);
         if (exists) {
             throw new Error(`The patient ${newPatient.patientId} already exists`);

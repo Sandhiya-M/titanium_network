@@ -29,6 +29,8 @@ class PrimaryContract extends Contract {
             emergencynumber: asset.emergencynumber,
             address: asset.address,
             bloodgroup: asset.bloodgroup,
+            lefteyeimage:asset.lefteyeimage,
+            righteyeimage:asset.righteyeimage,
             righteyepower: asset.righteyepower,
             lefteyepower: asset.lefteyepower,
             prescription: asset.prescription,
@@ -40,7 +42,9 @@ class PrimaryContract extends Contract {
             password: asset.password,
             permissiongranted: asset.permissiongranted,
             pwdTemp:asset.pwdTemp,
-            changedby:asset.changedby         
+            changedby:asset.changedby,
+            output:asset.output 
+
         });
         return asset;
     }

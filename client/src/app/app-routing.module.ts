@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
 import { LoginComponent } from './login/login.component';
 import { PatientComponent } from './patient/patient.component';
 import { DoctorComponent } from './doctor/doctor.component';
@@ -14,8 +13,6 @@ import { PatientDetailsPersonalEditComponent } from './patient/patient-details-p
 import { DoctorListForPatientComponent } from './doctor/doctor-list-for-patient/doctor-list-for-patient.component';
 import { PatientListForDoctorComponent } from './doctor/patient-list-for-doctor/patient-list-for-doctor.component';
 import { DoctorListForAdminComponent } from './doctor/doctor-list-for-admin/doctor-list-for-admin.component';
-
-
 const routes: Routes = [
   {
     path: '',
@@ -79,9 +76,7 @@ const routes: Routes = [
     path: 'doctors/list/:self',
     component: DoctorListForAdminComponent
   }
-
 ];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

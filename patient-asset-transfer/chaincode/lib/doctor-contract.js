@@ -33,9 +33,12 @@ class DoctorContract extends AdminContract {
             riskfactors: asset.riskfactors,
             lefteyekeywords: asset.lefteyekeywords,
             righteyekeywords: asset.righteyekeywords,
+            lefteyeimage:asset.lefteyeimage,
+            righteyeimage:asset.righteyeimage,
             examinationdate: asset.examinationdate,
             chanedby: asset.chanedby,
             gender: asset.gender,
+            output:asset.output
         });
         return asset;
     }
@@ -143,7 +146,10 @@ class DoctorContract extends AdminContract {
                 riskfactors: obj.Record.riskfactors,
                 lefteyekeywords: obj.Record.lefteyekeywords,
                 righteyekeywords: obj.Record.righteyekeywords,
+                lefteyeimage: obj.Record.lefteyeimage,
+                righteyeimage: obj.Record.righteyeimage,
                 examinationdate: obj.Record.examinationdate,
+                output:obj.Record.output
                 
             };
             if (includeTimeStamp) {

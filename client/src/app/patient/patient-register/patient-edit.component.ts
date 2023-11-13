@@ -21,7 +21,8 @@ export class PatientEditComponent implements OnInit, OnDestroy {
   public patientId: any;
   public newPatientData: any;
   private allSub = new Subscription();
-
+  public leftimage='';
+  public rightimage='';
   public bloodGroupTypes = [
     {id: 'a+', name: 'A +'},
     {id: 'a-', name: 'A -'},
@@ -39,17 +40,21 @@ export class PatientEditComponent implements OnInit, OnDestroy {
     private readonly fb: FormBuilder,
     private readonly patientService: PatientService,
     private readonly authService: AuthService
+    
   ) {
     this.form = this.fb.group({
       firstname: ['', Validators.required],
       lastname: ['', Validators.required],
       address: ['', Validators.required],
+      gender:['', Validators.required],
       age: ['', [ Validators.required, Validators.min(0), Validators.max(150), Validators.maxLength(3)]],
       phonenumber: ['', Validators.required],
       emergencynumber: ['', Validators.required],
       bloodgroup: ['', Validators.required],
       lefteyepower: [''],
       righteyepower: [''],
+      righteyeimage:[''],
+      lefteyeimage:[''],
       righteyekeywords: [''],
       lefteyekeywords: [''],
       symptoms: [''],
@@ -102,12 +107,50 @@ export class PatientEditComponent implements OnInit, OnDestroy {
   public getAdminUsername(): string {
     return this.authService.getUsername();
   }
-
+  public handleImageUploadright(event: any) {
+    const file = event.target.files[0];
+  
+    if (file) {
+      const reader = new FileReader();
+  
+      reader.onload = (e: any) => {
+        const dataURL = e.target.result;
+        this.rightimage=dataURL;
+        this.form.patchValue({righteyeimage: dataURL});
+       
+        console.log(dataURL); // This will log the data URL
+      };
+  
+      reader.readAsDataURL(file);
+    }
+  }
+  public handleImageUploadleft(event: any) {
+    const file = event.target.files[0];
+  
+    if (file) {
+      const reader = new FileReader();
+  
+      reader.onload = (e: any) => {
+        const dataURL = e.target.result;
+        this.leftimage=dataURL;
+        this.form.patchValue({lefteyeimage: dataURL});
+        console.log(dataURL); // This will log the data URL
+      };
+  
+      reader.readAsDataURL(file);
+    }
+  }
   public save(): void {
+   
+
     if (this.isNew()) {
+      this.form.patchValue({lefteyeimage: this.leftimage,righteyeimage: this.rightimage});
+      
       this.allSub.add(
+        
         this.patientService.createPatient(this.form.value).subscribe(x => this.newPatientData = x)
       );
+    
     }
     else if (this.isPatient()) {
       this.allSub.add(
@@ -162,6 +205,7 @@ export class PatientEditComponent implements OnInit, OnDestroy {
         lastname: record.lastname,
         address: record.address,
         age: record.age,
+        gender:record.gender,
         phonenumber: record.phonenumber,
         emergencynumber: record.emergencynumber
       });
@@ -175,7 +219,7 @@ export class PatientEditComponent implements OnInit, OnDestroy {
         riskfactors: record.riskfactors,
         lefteyekeywords: record.lefteyekeywords,
         righteyekeywords:record.righteyekeywords,
-      
+             
       });
     }
   }

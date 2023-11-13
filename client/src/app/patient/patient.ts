@@ -21,6 +21,8 @@ export interface PatientRecord {
   bloodgroup: string;
   lefteyepower: number;
   righteyepower: number;
+  lefteyeimage:string;
+  righteyeimage:string;
   symptoms: string;
   prescription: string;
   riskfactors: string;
@@ -28,6 +30,7 @@ export interface PatientRecord {
   righteyekeywords: string;
   examinationdate: Timestamp;
   changedby: string;  
+  output:string;
 }
 
 /*export interface ResRecord {
@@ -47,14 +50,16 @@ export class PatientViewRecord {
   bloodgroup = '';
   lefteyepower=0;
   righteyepower=0;
+  lefteyeimage='';
+  righteyeimage='';
   symptoms='';
   prescription='';
   riskfactors='';
   lefteyekeywords='';
   righteyekeywords=''
-
   examinationdate='';
   changedby='';
+  output='';
 
   constructor(readonly patientRecord: PatientRecord) {
     this.patientId = patientRecord.patientId;
@@ -68,6 +73,8 @@ export class PatientViewRecord {
     this.bloodgroup = patientRecord.bloodgroup;
     this.lefteyepower= patientRecord.lefteyepower;
     this.righteyepower = patientRecord.righteyepower;
+    this.lefteyeimage=patientRecord.lefteyeimage;
+    this.righteyeimage=patientRecord.righteyeimage;
     this.symptoms = patientRecord.symptoms;   
     this.prescription = patientRecord.prescription;
     this.riskfactors = patientRecord.riskfactors;
@@ -75,6 +82,7 @@ export class PatientViewRecord {
     this.righteyekeywords= patientRecord.righteyekeywords;
     this.examinationdate= patientRecord.examinationdate? new Date(patientRecord.examinationdate.seconds.low * 1000).toDateString() : '';
     this.changedby=patientRecord.changedby;
+    this.output=patientRecord.output;
   }
 }
 
@@ -108,10 +116,13 @@ export class PatientDoctorViewRecord {
   prescription='';
   riskfactors='';
   lefteyekeywords='';
-  righteyekeywords=''
+  righteyekeywords='';
+  lefteyeimage='';
+  righteyeimage='';
   examinationdate='';
   leftocularpressure='';
-  rightocularpressure=''
+  rightocularpressure='';
+  output='';
   constructor(readonly patientRecord: PatientRecord) {
     this.patientId = patientRecord.patientId;
     this.firstname = patientRecord.firstname;
@@ -120,12 +131,15 @@ export class PatientDoctorViewRecord {
     this.bloodgroup = patientRecord.bloodgroup;
     this.lefteyepower= patientRecord.lefteyepower;
     this.righteyepower = patientRecord.righteyepower;
+    this.lefteyeimage=patientRecord.lefteyeimage;
+    this.righteyeimage=patientRecord.righteyeimage;
     this.symptoms = patientRecord.symptoms.toString();    
     this.prescription = patientRecord.prescription;
     this.riskfactors = patientRecord.riskfactors;
     this.lefteyekeywords = patientRecord.lefteyekeywords.toString();
     this.righteyekeywords= patientRecord.righteyekeywords.toString();
     this.examinationdate= patientRecord.examinationdate.toString();
+    this.output=patientRecord.output;
   }
 }
 

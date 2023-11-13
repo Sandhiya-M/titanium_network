@@ -8,10 +8,13 @@ const morgan = require('morgan');
 const jwt = require('jsonwebtoken');
 const crypto = require('crypto');
 
+
 const jwtSecretToken = 'password';
 const refreshSecretToken = 'refreshpassword';
 let refreshTokens = [];
 const app = express();
+app.use(express.json({ limit: '10mb' }));
+
 app.use(morgan('combined'));
 app.use(bodyParser.json());
 app.use(cors());

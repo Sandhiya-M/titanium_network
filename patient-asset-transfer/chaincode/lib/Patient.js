@@ -2,10 +2,10 @@
 const crypto = require('crypto');
 
 class Patient {
-
     constructor(patientId, firstname, lastname, password, age,gender, phonenumber, emergencynumber, address, bloodgroup,
-        lefteyepower,righteyepower,prescription='',riskfactors='',lefteyekeywords='',righteyekeywords='',exmainationdate,  changedby = '',symptoms = '')
+        lefteyepower,righteyepower,lefteyeimage,righteyeimage,prescription='',riskfactors='',lefteyekeywords='',righteyekeywords='',exmainationdate,  changedby = '',symptoms = '',output='')
     {
+        
         this.patientId = patientId;
         this.firstname = firstname;
         this.lastname = lastname;
@@ -18,6 +18,8 @@ class Patient {
         this.bloodgroup = bloodgroup;
         this.lefteyepower=lefteyepower;
         this.righteyepower=righteyepower;
+        this.lefteyeimage=lefteyeimage,
+        this.righteyeimage=righteyeimage,
         this.prescription=prescription;
         this.riskfactors=riskfactors;
         this.lefteyekeywords=lefteyekeywords;

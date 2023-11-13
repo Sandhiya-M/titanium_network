@@ -125,13 +125,16 @@ class PatientContract extends PrimaryContract {
                 phonenumber: obj.Record.phonenumber,
                 emergencynumber: obj.Record.emergencynumber,
                 bloodgroup: obj.Record.bloodgroup,
+                lefteyeimage: obj.Record.lefteyeimage,
+                righteyeimage:obj.Record.righteyeimage,
                 lefteyepower: obj.Record.lefteyepower,
                 righteyepower: obj.Record.righteyepower,
                 riskfactors: obj.Record.riskfactors,
                 prescription:obj.Record.prescription,
                 examinationdate: obj.Record.examinationdate,
                 changedby: obj.Record.changedb,
-                symptoms: obj.Record.symptoms
+                symptoms: obj.Record.symptoms,
+                output: obj.Record.output
             };
             if (includeTimeStamp) {
                 asset[i].changedby = obj.Record.changedby;

@@ -16,7 +16,8 @@ exports.createPatient = async (req, res) => {
   // 'slice' method omits first three letters and take number
   if (!('patientId' in req.body) || req.body.patientId === null || req.body.patientId === '') {
     const lastId = await network.invoke(networkObj, true, capitalize(userRole) + 'Contract:getLatestPatientId');
-    req.body.patientId = 'PID' + (parseInt(lastId.slice(3)) + 1);
+    console.log("Lastid:"+req.body.lefteyeimage);
+    req.body.patientId = 'PID' + (parseInt(lastId));
   }
 
   // When password is not provided in the request while creating a patient record.
