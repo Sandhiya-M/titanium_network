@@ -10,7 +10,6 @@ class AdminContract extends PrimaryContract {
     //Returns the last patientId in the set
     async getLatestPatientId(ctx) {
         let allResults = await this.queryAllPatients(ctx);
-
         return allResults.length;
     }
 
@@ -24,7 +23,7 @@ class AdminContract extends PrimaryContract {
         console.log("New id:----"+this.getLatestPatientId(ctx)+1);
 
         let newPatient = await new Patient(args.patientId, args.firstname, args.lastname, args.password, args.age,args.gender,
-            args.phonenumber, args.emergencynumber, args.address,args.bloodgroup,args.lefteyepower,args.righteyepower,args.lefteyeimage,args.righteyeimage,args.prescription,args.riskfactors,args.lefteyekeywords,args.righteyekeywords,args.changedby, args.symptoms);
+            args.phonenumber, args.emergencynumber, args.address,args.bloodgroup,args.lefteyepower,args.righteyepower,args.lefteyeimage,args.righteyeimage,args.prescription,args.riskfactors,args.lefteyekeywords,args.righteyekeywords,args.changedby, args.symptoms,args.examinationdate);
         const exists = await this.patientExists(ctx, newPatient.patientId);
         if (exists) {
             throw new Error(`The patient ${newPatient.patientId} already exists`);

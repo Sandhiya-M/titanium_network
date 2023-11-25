@@ -3,7 +3,8 @@
 // Bring common classes into scope, and Fabric SDK network class
 const {ROLE_ADMIN, ROLE_DOCTOR, ROLE_PATIENT, capitalize, getMessage, validateRole} = require('../utils.js');
 const network = require('../../patient-asset-transfer/application-javascript/app.js');
-
+const { exec } = require('child_process');
+const fs = require('fs');
 
 /**
  * @param  {Request} req Role in the header and patientId in the url
@@ -19,8 +20,30 @@ exports.getPatientById = async (req, res) => {
   const networkObj = await network.connectToNetwork(req.headers.username);
   // Invoke the smart contract function
   const response = await network.invoke(networkObj, true, capitalize(userRole) + 'Contract:readPatient', patientId);
-  (response.error) ? res.status(400).send(response.error) : res.status(200).send(JSON.parse(response));
-};
+  const responsejson=JSON.parse(response);
+  
+  fs.writeFileSync('/mnt/c/class/image_data.txt', responsejson.lefteyeimage);
+  fs.writeFileSync('/mnt/c/class/image_data2.txt', responsejson.righteyeimage);
+  await exec(`/mnt/c/Users/SANDHIYA/AppData/Local/Programs/Python/Python39/python.exe src/classify.py `, (error, stdout, stderr) => {
+    if (error) {
+        console.error(`Error: ${error.message}`);
+        return;
+    }
+    if (stderr) {
+        console.error(`Stderr: ${stderr}`);
+    
+    }
+     data=stdout.toString().trim().split("\n");
+     console.log(data);
+     responsejson.leftclass=data[2] ;
+     console.log(responsejson.leftclass);
+     responsejson.rightclass=data[data.length-1] ;
+     console.log(responsejson.rightclass);
+     (response.error) ? res.status( 400).send(response.error) : res.status(200).send(responsejson);
+    });
+       
+}
+
 
 /**
  * @param  {Request} req Body must be a json, role in the header and patientId in the url

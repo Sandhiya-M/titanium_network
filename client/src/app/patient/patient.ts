@@ -31,6 +31,11 @@ export interface PatientRecord {
   examinationdate: Timestamp;
   changedby: string;  
   output:string;
+  leftclass:string;
+  rightclass:string;
+  leftoutput:string;
+  rightoutput:string;
+  report:string;
 }
 
 /*export interface ResRecord {
@@ -59,7 +64,11 @@ export class PatientViewRecord {
   righteyekeywords=''
   examinationdate='';
   changedby='';
-  output='';
+  leftoutput='';
+  rightoutput='';
+  leftclass='';
+  rightclass='';
+  report='';
 
   constructor(readonly patientRecord: PatientRecord) {
     this.patientId = patientRecord.patientId;
@@ -82,7 +91,11 @@ export class PatientViewRecord {
     this.righteyekeywords= patientRecord.righteyekeywords;
     this.examinationdate= patientRecord.examinationdate? new Date(patientRecord.examinationdate.seconds.low * 1000).toDateString() : '';
     this.changedby=patientRecord.changedby;
-    this.output=patientRecord.output;
+    this.leftoutput=patientRecord.leftoutput;
+    this.rightoutput=patientRecord.rightoutput;
+    this.leftclass=patientRecord.leftclass;
+    this.rightclass=patientRecord.rightclass;
+    this.report=patientRecord.report;
   }
 }
 
@@ -122,7 +135,11 @@ export class PatientDoctorViewRecord {
   examinationdate='';
   leftocularpressure='';
   rightocularpressure='';
-  output='';
+  leftoutput='';
+  rightoutput='';
+  leftclass='';
+  rightclass='';
+  report='';
   constructor(readonly patientRecord: PatientRecord) {
     this.patientId = patientRecord.patientId;
     this.firstname = patientRecord.firstname;
@@ -139,7 +156,11 @@ export class PatientDoctorViewRecord {
     this.lefteyekeywords = patientRecord.lefteyekeywords.toString();
     this.righteyekeywords= patientRecord.righteyekeywords.toString();
     this.examinationdate= patientRecord.examinationdate.toString();
-    this.output=patientRecord.output;
+    this.leftoutput=patientRecord.leftoutput;
+    this.rightoutput=patientRecord.rightoutput;
+    this.leftclass=patientRecord.leftclass;
+    this.rightclass=patientRecord.rightclass;
+    this.report=patientRecord.report;
   }
 }
 

@@ -25,7 +25,7 @@ exports.createPatient = async (req, res) => {
     req.body.password = Math.random().toString(36).slice(-8);
   }
 
-  req.body.changedBy = req.headers.username;
+  req.body.changedby = req.headers.username;
 
   // The request present in the body is converted into a single json string
   const data = JSON.stringify(req.body);

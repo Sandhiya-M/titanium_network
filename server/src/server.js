@@ -7,14 +7,11 @@ const cors = require('cors');
 const morgan = require('morgan');
 const jwt = require('jsonwebtoken');
 const crypto = require('crypto');
-
-
 const jwtSecretToken = 'password';
 const refreshSecretToken = 'refreshpassword';
 let refreshTokens = [];
 const app = express();
 app.use(express.json({ limit: '10mb' }));
-
 app.use(morgan('combined'));
 app.use(bodyParser.json());
 app.use(cors());
@@ -23,7 +20,6 @@ app.use(cors());
    // console.log('Express server started on port %s at %s', server.address().port, server.address().address);
 //});
 app.listen(3001, () => console.log('Backend server running on 3001'));
-
 // Bring key classes into scope
 const patientRoutes = require('./patient-routes');
 const doctorRoutes = require('./doctor-routes');
@@ -41,8 +37,6 @@ const network = require('../../patient-asset-transfer/application-javascript/app
   .listen(3001, function() {
     console.log('Backend server running on 3001! Go to https://localhost:3001/');
   });*/
-
-
 const authenticateJWT = (req, res, next) => {
   const authHeader = req.headers.authorization;
 

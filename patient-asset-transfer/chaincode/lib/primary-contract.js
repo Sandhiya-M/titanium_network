@@ -2,6 +2,7 @@
 const { Contract } = require('fabric-contract-api');
 let Patient = require('./Patient.js');
 let initPatients = require('./initLedger.json');
+
 class PrimaryContract extends Contract {
     async initLedger(ctx) {
         console.log('============= START : Initialize Ledger ===========');
@@ -19,6 +20,7 @@ class PrimaryContract extends Contract {
         }
         const buffer = await ctx.stub.getState(patientId);
         let asset = JSON.parse(buffer.toString());
+        
         asset = ({
             patientId: patientId,
             firstname: asset.firstname,
@@ -43,8 +45,7 @@ class PrimaryContract extends Contract {
             permissiongranted: asset.permissiongranted,
             pwdTemp:asset.pwdTemp,
             changedby:asset.changedby,
-            output:asset.output 
-
+            output: asset.output
         });
         return asset;
     }
@@ -92,7 +93,6 @@ class PrimaryContract extends Contract {
 
         return this.fetchLimitedFields(asset);
     }
-
     fetchLimitedFields = asset => {
         for (let i = 0; i < asset.length; i++) {
             const obj = asset[i];
@@ -104,9 +104,7 @@ class PrimaryContract extends Contract {
                 emergencynumber: obj.Record.emergenynumber
             };
         }
-
         return asset;
-    }
-    
+    }    
 }
 module.exports = PrimaryContract;

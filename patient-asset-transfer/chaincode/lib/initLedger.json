@@ -37,7 +37,12 @@
         ],
         "password": "fd1e5d642da134218f1cc5c260feb3e4042658a35d78c4eb2fe2b2f1c7e7795b",
         "pwdTemp": true,
-        "output":"hello"
+        "leftoutput":"hello",
+        "rightoutput":"hello",
+        "leftclass":"None",
+        "rightclass":"None",
+        "report":"None"
+
     },
     {
         "firstname": "Amit",
@@ -75,7 +80,12 @@
         ],
         "password": "fd1e5d642da134218f1cc5c260feb3e4042658a35d78c4eb2fe2b2f1c7e7795b",
         "pwdTemp": true,
-        "output":"hello"
+        "leftoutput":"hello",
+        "rightoutput":"hello",
+        "leftclass":"None",
+        "rightclass":"None",
+        "report":"None"
+
     },
     {
         "firstname": "Alice",
@@ -114,7 +124,12 @@
         ],
         "password": "fd1e5d642da134218f1cc5c260feb3e4042658a35d78c4eb2fe2b2f1c7e7795b",
         "pwdTemp": true,
-        "output":"hello"
+        "leftoutput":"hello",
+        "rightoutput":"hello",
+        "leftclass":"None",
+        "rightclass":"None",
+        "report":"None"
+
     },
     {
         "firstname": "Sarah",
@@ -153,7 +168,12 @@
         ],
         "password": "fd1e5d642da134218f1cc5c260feb3e4042658a35d78c4eb2fe2b2f1c7e7795b",
         "pwdTemp": true,
-        "output":"hello"
+        "leftoutput":"hello",
+        "rightoutput":"hello",
+        "leftclass":"None",
+        "rightclass":"None",
+        "report":"None"
+
     },
     {
         "firstname": "Priya",
@@ -192,7 +212,12 @@
         ],
         "password": "fd1e5d642da134218f1cc5c260feb3e4042658a35d78c4eb2fe2b2f1c7e7795b",
         "pwdTemp": true,
-        "output":"hello"
+        "leftoutput":"hello",
+        "rightoutput":"hello",
+        "leftclass":"None",
+        "rightclass":"None",
+        "report":"None"
+
     },
     {
         "firstname": "Jim",
@@ -231,7 +256,12 @@
         ],
         "password": "fd1e5d642da134218f1cc5c260feb3e4042658a35d78c4eb2fe2b2f1c7e7795b",
         "pwdTemp": true,
-        "output":"hello"
+        "leftoutput":"hello",
+        "rightoutput":"hello",
+        "leftclass":"None",
+        "rightclass":"None",
+        "report":"None"
+
     },
     {
         "firstname": "Jack",
@@ -270,7 +300,12 @@
         ],
         "password": "fd1e5d642da134218f1cc5c260feb3e4042658a35d78c4eb2fe2b2f1c7e7795b",
         "pwdTemp": true,
-        "output":"hello"
+        "leftoutput":"hello",
+        "rightoutput":"hello",
+        "leftclass":"None",
+        "rightclass":"None",
+        "report":"None"
+
     },
     {
         "firstname": "David",
@@ -309,7 +344,12 @@
         ],
         "password": "fd1e5d642da134218f1cc5c260feb3e4042658a35d78c4eb2fe2b2f1c7e7795b",
         "pwdTemp": true,
-        "output":"hello"
+        "leftoutput":"hello",
+        "rightoutput":"hello",
+        "leftclass":"None",
+        "rightclass":"None",
+        "report":"None"
+
     },
     {
         "firstname": "Alex",
@@ -341,7 +381,12 @@
         ],
         "password": "fd1e5d642da134218f1cc5c260feb3e4042658a35d78c4eb2fe2b2f1c7e7795b",
         "pwdTemp": true,
-        "output":"hello"
+        "leftoutput":"hello",
+        "rightoutput":"hello",
+        "leftclass":"None",
+        "rightclass":"None",
+        "report":"None"
+
     },
     {
         "firstname": "Joseph",
@@ -381,7 +426,12 @@
         ],
         "password": "fd1e5d642da134218f1cc5c260feb3e4042658a35d78c4eb2fe2b2f1c7e7795b",
         "pwdTemp": true,
-        "output":"hello"
+        "leftoutput":"hello",
+        "rightoutput":"hello",
+        "leftclass":"None",
+        "rightclass":"None",
+        "report":"None"
+
     },
     {
         "firstname": "James",
@@ -421,6 +471,11 @@
         ],
         "password": "fd1e5d642da134218f1cc5c260feb3e4042658a35d78c4eb2fe2b2f1c7e7795b",
         "pwdTemp": true,
-        "output":"hello"
+        "leftoutput":"hello",
+        "rightoutput":"hello",
+        "leftclass":"None",
+        "rightclass":"None",
+        "report":"None"
+
     }
 ]

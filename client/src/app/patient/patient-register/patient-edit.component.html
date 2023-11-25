@@ -94,11 +94,25 @@
                          placeholder="Risk Factors">
                 </div>
                 <div class="form-group">
-                  <label for="treatment">Prescription</label>
+                  <label for="prescription">Prescription</label>
                   <input type="text" class="form-control" name="prescription" formControlName="prescription"
                          placeholder="Prescription separated by comma?">
                 </div>
-                
+                <div class="form-group">
+                  <label for="leftclass">Leftclass</label>
+                  <input type="text" class="form-control" name="leftclass" formControlName="leftclass"
+                         placeholder="Leftclass">
+                </div>
+                <div class="form-group">
+                  <label for="rightclass">Rightclass</label>
+                  <input type="text" class="form-control" name="rightclass" formControlName="rightclass"
+                         placeholder="Rightclass">
+                </div>
+                <div class="form-group">
+                  <label for="report">Report</label>
+                  <input type="text" class="form-control" name="report" formControlName="report"
+                         placeholder="report">
+                </div>
               </ng-container>
               <div *ngIf="newPatientData">
                 <p class="alert alert-success">New patient's credentials: {{newPatientData.id}} - {{newPatientData.password}}</p>

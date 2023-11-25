@@ -134,7 +134,11 @@ class PatientContract extends PrimaryContract {
                 examinationdate: obj.Record.examinationdate,
                 changedby: obj.Record.changedb,
                 symptoms: obj.Record.symptoms,
-                output: obj.Record.output
+                leftoutput:obj.Record.leftoutput,
+                rightoutput:obj.Record.rightoutput,
+                leftclass: obj.Record.leftclass,
+                rightclass:obj.Record.rightclass,
+                report:obj.Record.report
             };
             if (includeTimeStamp) {
                 asset[i].changedby = obj.Record.changedby;

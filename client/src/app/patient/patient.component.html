@@ -102,6 +102,30 @@
                 <td class="labels"><strong>ChangedBy &nbsp; &nbsp;</strong></td>
                 <td>{{record.changedby}}</td>
               </tr>
+              <hr>
+              <h2 style="text-align:center;"> <b>AI Diagnosis Report</b></h2>
+              <tr>
+                <td class="labels"><strong>Left Classification &nbsp; &nbsp;</strong></td>
+                <td>{{record.leftclass}}</td>
+              </tr>   
+              <tr>
+                <td class="labels"><strong>Right Classification &nbsp; &nbsp;</strong></td>
+                <td>{{record.rightclass}}</td>
+              </tr>   
+              <tr>
+                <td class="labels"><strong>Left Diagnosis: &nbsp; &nbsp;</strong></td>
+                <td><img src= {{record.leftoutput}} width="200" height="200"></td>                
+              </tr>
+              <tr>
+                <td class="labels"><strong>Right Diagnosis: &nbsp; &nbsp;</strong></td>
+                <td><img src= {{record.rightoutput}} width="200" height="200"></td>                
+              </tr>
+              <tr>
+                <td class="labels"><strong>Report &nbsp; &nbsp;</strong></td>
+                <td>{{record.report}}</td>
+              </tr>
+              
+              
             </span>
           </table>
           <div *ngIf="patientRecordObs === undefined">

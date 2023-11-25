@@ -23,6 +23,7 @@ export class PatientEditComponent implements OnInit, OnDestroy {
   private allSub = new Subscription();
   public leftimage='';
   public rightimage='';
+  public examinationdate='';
   public bloodGroupTypes = [
     {id: 'a+', name: 'A +'},
     {id: 'a-', name: 'A -'},
@@ -60,6 +61,7 @@ export class PatientEditComponent implements OnInit, OnDestroy {
       symptoms: [''],
       prescription:[''],
       riskfactors:[''],
+      
     });
   }
 
@@ -141,10 +143,11 @@ export class PatientEditComponent implements OnInit, OnDestroy {
     }
   }
   public save(): void {
-   
+    var date=new Date();
+   this.examinationdate=date.toString();
 
     if (this.isNew()) {
-      this.form.patchValue({lefteyeimage: this.leftimage,righteyeimage: this.rightimage});
+      this.form.patchValue({lefteyeimage: this.leftimage,righteyeimage: this.rightimage,examinationdate:this.examinationdate});
       
       this.allSub.add(
         

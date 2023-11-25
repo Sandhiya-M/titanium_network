@@ -2,7 +2,6 @@
     "name": "patient-application",
     "version": "1.0.0",
     "description": "Patient application implemented in JavaScript",
-    
     "scripts": {
         "start": "./node_modules/nodemon/bin/nodemon.js src/server.js",
         "prestart": "node initServer.js",
@@ -26,12 +25,13 @@
         "fabric-ca-client": "^2.2.0",
         "fabric-client": "^1.4.10",
         "fabric-network": "^2.2.19",
+        "fs": "^0.0.0",
+        "image-type": "^5.0.0",
         "jsonwebtoken": "^9.0.2",
         "morgan": "^1.9.1",
         "nodemon": "^3.0.1",
-        "redis": "^3.0.2",
-        "image-type": "^5.0.0",
-        "fs": "^0.0.0"
+        "python-shell": "^5.0.0",
+        "redis": "^3.0.2"
     },
     "devDependencies": {
         "eslint": "^7.16.0",

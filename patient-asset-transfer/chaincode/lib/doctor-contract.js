@@ -149,7 +149,12 @@ class DoctorContract extends AdminContract {
                 lefteyeimage: obj.Record.lefteyeimage,
                 righteyeimage: obj.Record.righteyeimage,
                 examinationdate: obj.Record.examinationdate,
-                output:obj.Record.output
+                leftclass: obj.Record.leftclass,
+                rightclass: obj.Record.rightclass,
+                leftoutput: obj.Record.leftoutput,
+                rightoutput: obj.Record.rightoutput,
+                report: obj.Record.output,
+                changedby: obj.Record.changedby               
                 
             };
             if (includeTimeStamp) {
